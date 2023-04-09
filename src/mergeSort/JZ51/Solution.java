@@ -40,6 +40,7 @@ public class Solution {
                 tmparr[index++] = array[tmp1++];
             } else {
                 //用来统计逆序对的个数
+                //mid - tmp1 + 1不能写成tmp2-tmp1+1，这样写重复计算之前的
                 count += mid - tmp1 + 1 ;
                 count %= 1000000007;
                 tmparr[index++] = array[tmp2++];
@@ -54,6 +55,7 @@ public class Solution {
             tmparr[index++] = array[tmp2++];
         }
 
+        //把新数组中的数覆盖 array数组
         for (int k = 0; k < tmparr.length; k++) {
             array[k + left] = tmparr[k];
         }

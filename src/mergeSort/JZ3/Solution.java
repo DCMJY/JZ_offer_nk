@@ -6,7 +6,7 @@ https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/mian-
 来源：力扣（LeetCode）
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  */
-package shuzu.JZ3;
+package mergeSort.JZ3;
 
 //时间复杂度 O(N) ： 遍历数组使用 O(N) ，每轮遍历的判断和交换操作使用 O(1) 。
 //空间复杂度 O(N) ： HashSet表需要的空间

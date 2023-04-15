@@ -41,6 +41,11 @@ public class Solution {
     }
     private int[] quickSort(int []arr, int k, int left, int right) {
         int i = left, j = right;
+//        文中的写法这两个 while执行完， i j 同时指向一个 < arr[l] 的数，
+//        因此最后再执行 arr[l], arr[i] = arr[i], arr[l] 可以把哨兵交换到正确的位置。
+//        而如果互换这两句，那么就是 i 先向右遍历，两个 while 执行完，
+//        i j 同时指向一个 > arr[l] 的数，那么就不对了。如果要交换写，
+//        那么同时也要把哨兵换成数组的末元素，让整个哨兵划分操作对称。
         while (i < j) {
             while (i < j && arr[j] >= arr[left]) j--;
             while (i < j && arr[i] <= arr[left]) i++;
